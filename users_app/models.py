@@ -31,11 +31,3 @@ class MentorProfile(Profile):
 class MenteeProfile(Profile):
     # Add mentee-specific fields here
     pass
-
-class ManagerProfile(Profile):
-    # Add manager-specific fields here
-    pass
-
-class AdminProfile(Profile):
-    # Add admin-specific fields here
-    pass

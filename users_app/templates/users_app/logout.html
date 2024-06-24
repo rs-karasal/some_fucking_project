@@ -1,6 +1,15 @@
-<h2>Are you sure you want to log out?</h2>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit" name="confirm" value="yes">Yes</button>
-    <button type="submit" name="confirm" value="no">No</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout Confirmation</title>
+</head>
+<body>
+    <h2>Are you sure you want to log out?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="confirm" value="yes">Yes, log me out</button>
+    </form>
+    <a href="{{ request.META.HTTP_REFERER|default:'/' }}">Cancel</a>
+</body>
+</html>
